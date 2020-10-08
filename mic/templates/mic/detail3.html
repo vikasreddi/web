@@ -1,0 +1,14 @@
+{% extends 'mic/base1.html' %}
+
+{% block body %}
+{% if object_list %}
+    <h2>These are all albums:</h2>
+ <ul>
+    {% for all in object_list %}
+       <h3>{{all.album_tittle}}</h3>
+    {% endfor %}
+ </ul>
+{% else %}
+    <h3> You dont have any album </h3>
+{% endif %}
+{% endblock %}

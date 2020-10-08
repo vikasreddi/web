@@ -1,0 +1,15 @@
+
+{% extends 'mic/base1.html' %}
+{% block tittle %}Album details{% endblock %}
+{% block body %}
+
+ <img src="{{al.album_logo}}">
+<h1> {{al.album_tittle}}</h1>
+
+ <h3>{{al.artist}}</h3>
+ <ul>
+    {% for song in al.song_set.all %}
+        <li>{{song.song_tittle}} </li>
+    {% endfor %}
+ </ul>
+{% endblock %}
